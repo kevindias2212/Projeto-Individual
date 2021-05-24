@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IoT</title>
+    <title>MiniCarBits</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/48b24e7021.js" crossorigin="anonymous"></script>
 </head>
@@ -44,17 +44,17 @@
                     Se quiser <b style="color: rgb(104, 182, 255);">comprar, vender e trocar <span style="color: yellow">Hot Wheels</span></b> também, começe iniciando uma sessão, clicando nesse botão!!
                 </span>
                 <p></p>
-                <button class="botao">INICIE SUA SESSÃO</button>
+                <button class="botao" onclick="redirecionar_login()">INICIE SUA SESSÃO</button>
             </div>
         </div>
     </div>
     <div class="footer">
         Criado e desenvolvido por Kevin Dias 
     </div>
-
-
-
-    
 </body>
-
 </html>
+<script>
+    function redirecionar_login() {
+    window.location.href = 'login.html';
+}
+</script>

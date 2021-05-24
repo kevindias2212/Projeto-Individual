@@ -34,7 +34,7 @@ a {
 
 .header {
     background-color: #2294ff;
-    height: 110px;
+    height: 100px;
     width: 100%;
     border-bottom: rgb(255, 255, 0) solid 8px;
     position: fixed;
@@ -157,7 +157,7 @@ a {
     border: none;
     background-color: white;
     border-radius: 50px;
-
+    cursor: pointer;
 }
 
 .footer{
