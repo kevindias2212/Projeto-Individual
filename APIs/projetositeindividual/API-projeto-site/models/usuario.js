@@ -33,6 +33,11 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.DATE,
 			allowNull: false
 		},
+		telefone: {
+			field: 'telefone',
+			type: DataTypes.INTEGER,
+			allowNull: false
+		},
 		senha: {
 			field: 'senha',
 			type: DataTypes.STRING,
