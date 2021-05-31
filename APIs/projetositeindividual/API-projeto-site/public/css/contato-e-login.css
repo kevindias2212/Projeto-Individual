@@ -91,7 +91,6 @@ form label, form p{
     color: white;
     padding: 60px 20px 0px 20px;
     border-radius: 25%;
-    border: yellow solid 5px;
     width: 400px;
     margin-bottom: 50px;
     margin-top: 50px;
@@ -120,22 +119,5 @@ form label, form p{
 }
 
 .imagem-lateral{
-    width: 350px;
-}
-
-/* EXTRA */
-
-.extra {
-    margin: 10px;
-}
-
-.extra img {
-  height: 50px;
-   visibility: hidden;
-}
-
-.extra .msg_erro {
-    background-color: sandybrown; 
-    color: black; 
-    visibility: hidden;
+    width: 300px;
 }
