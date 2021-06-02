@@ -69,11 +69,10 @@ form label, form p{
 }
 
 .pag-login {
-    
-    background-image: url(https://cdn-www.bluestacks.com/bs-images/bg174.jpg);
+    background-image: url('wallpaper3.jpg');
     background-size: cover;
     text-align: center;
-    height: 520px;    
+    height: 650px;    
 }
 
 .pag-login h1 {
@@ -89,11 +88,11 @@ form label, form p{
     display: inline-block;
     background-color: #1124FA;
     color: white;
-    padding: 60px 20px 0px 20px;
+    
     border-radius: 25%;
     width: 400px;
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .pag-login .btn-green {
@@ -120,4 +119,21 @@ form label, form p{
 
 .imagem-lateral{
     width: 300px;
+}
+
+/* EXTRA */
+
+.extra {
+    margin: 10px;
+}
+
+.extra img {
+  height: 50px;
+   visibility: hidden;
+}
+
+.extra .msg_erro {
+    background-color: sandybrown; 
+    color: black; 
+    visibility: hidden;
 }
