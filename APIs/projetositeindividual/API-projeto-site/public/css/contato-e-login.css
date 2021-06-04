@@ -1,32 +1,31 @@
 /* PÁGINA DO CONTATO */
 
 .contato {
-    background-color: #00ccff;
+    background-image: url('wallpaper3.jpg');
+    background-size: cover;
+    height: 660px;  
 }
 
 .contato .container {
+    background-color: #00000082;
+    color: white;
     overflow: auto;
+    height: 100%;
+    margin-right: 60%;
+    width: 40%;
 }
 
 .h1 {
-    font-weight: bold;
-    font-size: 40px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    text-align: right;
-    padding-right: 150px ;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .formulario {
-    float: right;
-    width: 500px;
-    margin: 5px;
-}
-
-form label, form p{
-    display: block;
-    font-size: 20px;
-    margin-bottom:10px ;
+    margin: auto;
+    width: 90%;
+    color: white;
 }
 
 .btn-green {
@@ -39,22 +38,12 @@ form label, form p{
     cursor: pointer;
 }
 
-.imagem-lateral {
-    overflow: auto;
-    padding-right: 60px;
-}
-
-.contato img {
-    float: right;
-    width: 85%;
-}
 
 .input-padrao {
     display: block;
-    margin-bottom: 20px;
-    padding: 10px 25px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
     width: 90%;
-
     border-radius: 5px;
     border: solid 1px #bbbbbb;
 }
@@ -71,54 +60,39 @@ form label, form p{
 .pag-login {
     background-image: url('wallpaper3.jpg');
     background-size: cover;
-    text-align: center;
-    height: 650px;    
-}
-
-.pag-login h1 {
-    margin-bottom: 40px;
-}
-
-.pag-login .input-padrao {
-    width: 50%;
-    display: inline-block;
+    height: 660px;    
 }
 
 .box-login {
     display: inline-block;
-    background-color: #1124FA;
+    background-color: #00000082;
     color: white;
-    
-    border-radius: 25%;
-    width: 400px;
-    margin-bottom: 50px;
-    margin-top: 60px;
+    margin-left: 60%;
+    height: 100%;
+    width: 40%;    
 }
 
-.pag-login .btn-green {
-    display: block;
-    float: none;
-    margin: auto;
-    background-color: red;
-    color: white;
-
+.pag-login h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 100px;
+    margin-bottom: 10px;
 }
+
 .botao-cadastrar{
     display: block;
     float: none;
     margin: auto;
-    margin-bottom: 65px;
+    margin-top: 15px;
+    margin-right: 200px;
+    margin-bottom: 10px;
     border: none;
+    font-size: 20px;
     padding: 10px;
     background-color: red;
     color: white;
     border-radius: 5px;
     cursor: pointer;
-
-}
-
-.imagem-lateral{
-    width: 300px;
 }
 
 /* EXTRA */

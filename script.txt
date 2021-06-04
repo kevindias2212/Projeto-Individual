@@ -1,0 +1,18 @@
+create database teste;
+
+
+use teste;
+
+
+create table teste1 (id int primary key auto_increment,
+		     nome varchar(45), 
+		     login varchar(45), 
+		     email varchar(45), 
+		     dataNasc date, 
+		     telefone char(11), 
+		     senha varchar(45));
+
+
+select * from teste1;
+
+drop table teste1;

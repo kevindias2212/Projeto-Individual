@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniCarBits - Login</title>
+    <title>Mundo das Miniaturas - Login</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contato-e-login.css">
 </head>
@@ -27,36 +27,28 @@
     <!--header fim-->
 
     <div class="pag-login">
-            <div class="box-login">
-                <h1>Login</h1>
+        <div class="box-login">
+                <h1>Login!</h1>
+                <div class="formulario">
+                    <form id="form_login" method="post" onsubmit="return entrar()">
+                        Usuário
+                        <input type="text" class="input-padrao" placeholder="Seu nome de usuário" name="login" required minlength="4">
 
-                <form id="form_login" method="post" onsubmit="return entrar()">
-                    Usuário:
-                    <input type="text" class="input-padrao" name="login">
-                    <br>
-                    Senha:
-                    <input style="margin-left: 8px;" type="password" class="input-padrao" name="senha">
-                    <br>
-                    <button id="btn_entrar" class="btn-green">ENTRAR</button>
-                </form>
+                        Senha
+                        <input type="password" class="input-padrao" placeholder="Sua senha" name="senha" required minlength="4">
 
-                <div class="extra">
-                    <div id="div_erro" class="msg_erro">
-                </div>
+                        <button id="btn_entrar" class="botao-cadastrar">Entrar</button>
+                    </form>
 
-                    <img src="aguardeHot.gif" id="img_aguarde" >
-                     <!-- style="display: none;" -->
-                    
-                </div>
+                    <div class="extra">
+                        <div id="div_erro" class="msg_erro">
+                    </div>
+                    <div>
+                        <img src="aguardeHot.gif" id="img_aguarde" style="height: 100px;margin-left: 35%; width: 100px">
+                    </div>
             </div>
+        </div>
     </div>
-
-    <!--footer inicio-->
-    <div class="footer" style="height: 29px;background-color: #1124FA;">
-        Adaptado por Kevin Dias 
-    </div>
-    <!--footer fim-->
-
 </body>
 
 </html>
