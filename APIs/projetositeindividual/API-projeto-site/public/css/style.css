@@ -28,6 +28,10 @@ a {
     text-decoration: none;
 }
 
+.container .img{
+    width: 170px;
+}
+
 /* CABEÇALHO */
 
 .header {

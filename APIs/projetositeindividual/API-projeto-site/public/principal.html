@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo das Miniaturas - Principal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/central.css">
+    <script src="https://kit.fontawesome.com/c2cb9d7809.js" crossorigin="anonymous"></script>
+</head>
+    
+<body>
+    <!--header inicio-->
+    <div class="header" style="position:static;">
+        <div class="container">
+            <h1 class="titulo"><img class="img" src="logonova.png";></h1>
+            <div class="exit">
+                <ul onclick="sair()">
+                    Sair <i class="fas fa-sign-out-alt" style="font-size: 25px;color: white;"></i>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="navegação">
+        <div class="middle_icons">
+            <div class="icon" onclick="redirecionar_anuncio()">
+                <i class="far fa-window-restore"></i>
+                <br>
+                <span style="font-size: 15px;"></span>Anúncios</span>
+            </div>
+            <div class="icon" onclick="redirecionar_colecao()">
+                <i class="fas fa-car"></i>
+                <br>
+                <span style="font-size: 15px;"></span>Coleção</span>
+            </div>
+            <div class="icon" onclick="redirecionar_perfil()">
+                <i class="fas fa-id-card"></i>
+                <br>
+                <span style="font-size: 15px;"></span>Perfil</span>
+            </div>
+            <div class="icon" onclick="redirecionar_info()">
+                <i class="fas fa-newspaper"></i>
+                <br>
+                <span style="font-size: 15px;"></span>Info. Geral</span>
+            </div>
+        </div>
+    </div>
+    <div class="fundo">
+        <div class="box">
+            <div class="texto">
+                Olá XXXXXXXXXXXX, seja bem vindo. 
+                <br><br>
+                -- Quer uma dica? --
+                <br><br>
+                Comece vendo os novos anúncios, adicionando itens à sua coleção ou alterando os seus dados de perfil.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function sair(){
+        window.location.href = 'index.html';
+    }
+
+    function redirecionar_anuncio(){
+        window.location.href = 'anuncio.html';
+    }
+
+    function redirecionar_colecao(){
+        window.location.href = 'colecao.html';
+    }
+
+function redirecionar_perfil(){
+    window.location.href = 'perfil.html';
+    }  
+
+function redirecionar_info(){
+    window.location.href = 'info.html';
+    }   
+</script>

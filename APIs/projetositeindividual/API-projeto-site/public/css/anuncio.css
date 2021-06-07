@@ -1,0 +1,28 @@
+.logo{
+    width: 180px;
+}
+
+.wall{
+    background-image: url(logoparteazul.png);
+    background-color: blue;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.box-esquerda{
+    background-color: rgba(0, 0, 0, 0.611);
+    height: 784px;
+    width: 23%;
+    float: left;
+    margin-top: 16px;
+}
+
+.box-meio{
+    background-color: rgba(255, 255, 255, 0.85);
+    height: 784px;
+    width: 75%;
+    margin-left: 16px;
+    margin-top: 16px;
+}
