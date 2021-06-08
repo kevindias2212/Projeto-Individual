@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/central.css">
     <script src="https://kit.fontawesome.com/c2cb9d7809.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
 </head>
     
 <body>
@@ -15,7 +16,7 @@
         <div class="container">
             <h1 class="titulo"><img class="img" src="logonova.png";></h1>
             <div class="exit">
-                <ul onclick="sair()">
+                <ul onclick="logoff()">
                     Sair <i class="fas fa-sign-out-alt" style="font-size: 25px;color: white;"></i>
                 </ul>
             </div>
@@ -48,20 +49,18 @@
     <div class="fundo">
         <div class="box">
             <div class="texto">
-                Olá XXXXXXXXXXXX, seja bem vindo. 
+                <span>Olá <b id="nome_Usuario"></b>, seja bem vindo.</span> 
                 <br><br>
-                -- Quer uma dica? --
+                <span>-- Quer uma dica? --</span>
                 <br><br>
-                Comece vendo os novos anúncios, adicionando itens à sua coleção ou alterando os seus dados de perfil.
+                <span>Comece vendo os novos anúncios, adicionando itens à sua coleção ou alterando os seus dados de perfil.</span>
             </div>
         </div>
     </div>
 </body>
 </html>
 <script>
-    function sair(){
-        window.location.href = 'index.html';
-    }
+    verificar_autenticacao();
 
     function redirecionar_anuncio(){
         window.location.href = 'anuncio.html';

@@ -29,15 +29,15 @@
     height: 95%;
     background-color: rgba(0, 0, 0, 0);
     color: rgb(0, 0, 0);
-    text-align: center;
+    
     border: rgb(0, 0, 0) solid 1px;
 }
 
 .box-meio{
     background-color: rgba(255, 255, 255, 0.85);
     height: 770px;
-    width: 75%;
-    margin-left: 40px;
+    width: 79%;
+    margin-left: 16px;
     margin-top: 25px;
     margin-bottom: 16px;
     overflow-y: scroll;

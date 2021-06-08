@@ -32,10 +32,10 @@
                 <div class="formulario">
                     <form id="form_login" method="post" onsubmit="return entrar()">
                         Usuário
-                        <input type="text" class="input-padrao" placeholder="Seu nome de usuário" name="login" required minlength="4">
+                        <input id="in_usuario" type="text" class="input-padrao" placeholder="Seu nome de usuário" name="login" required minlength="4">
 
                         Senha
-                        <input type="password" class="input-padrao" placeholder="Sua senha" name="senha" required minlength="4">
+                        <input id="in_senha" type="password" class="input-padrao" placeholder="Sua senha" name="senha" required minlength="4">
 
                         <button id="btn_entrar" class="botao-cadastrar">Entrar</button>
                     </form>
@@ -64,13 +64,22 @@
 
             if (resposta.ok) {
 
-                resposta.json().then(json => {
+                if (in_usuario.value == 'kkggdd' && in_senha.value == 'kkggdd2212') {
 
-                    sessionStorage.login_usuario_meuapp = json.login;
-                    sessionStorage.nome_usuario_meuapp = json.nome;
+                    resposta.json().then(json => {
+                        sessionStorage.login_usuario_meuapp = json.login;
+                        window.location.href = 'info.html';
+                    });
 
-                    window.location.href = 'principal.html';
-                });
+                }else{
+                    resposta.json().then(json => {
+                        sessionStorage.login_usuario_meuapp = json.login;
+                        sessionStorage.nome_usuario_meuapp = json.nome;
+    
+                        window.location.href = 'principal.html';
+                    });
+                }
+
 
             } else {
 

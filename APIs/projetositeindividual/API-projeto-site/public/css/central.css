@@ -43,15 +43,15 @@
     height: 60%;
     width: 60%;
     background-color: rgba(0, 0, 0, 0.727);
-    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .texto{
     text-align: center;
-    display: flex;
-    align-items: center;
     margin: auto;
-    height: 100%;
+    height: auto;
     width: 80%;
     font-size: 30px;
     color: white;

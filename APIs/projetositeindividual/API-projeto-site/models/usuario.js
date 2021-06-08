@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
 		},
 		telefone: {
 			field: 'telefone',
-			type: DataTypes.INTEGER,
+			type: DataTypes.STRING,
 			allowNull: false
 		},
 		senha: {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/central.css">
     <link rel="stylesheet" href="css/anuncio.css">
     <script src="https://kit.fontawesome.com/c2cb9d7809.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
 </head>
     
 <body>
@@ -46,12 +47,14 @@
             </div>
         </div>
     </div>
+    <span id="nome_perfil">
+        
+    </span>
+    
 </body>
 </html>
 <script>
-    function sair(){
-        window.location.href = 'index.html';
-    }
+    exibir_nome_perfil();
 
     function redirecionar_anuncio(){
         window.location.href = 'anuncio.html';

@@ -55,6 +55,15 @@
             <div class="grafico">
                 <canvas id="grafico2"></canvas>
             </div>
+            <div class="descricao">
+                No ano de 2020, foi o lançamento da plataforma da MDM e ao longo do ano os indicativos de crescimento de acessos na plataforma só ficaram mais evidentes, nos encorajando a continuar e avançar cada vez mais  com esse projeto.
+            </div>
+            <div class="descricao">
+                Ainda em 2020, apareceream cada vez mais usuários dispostos a vender e comprar a miniaturas de Hot Wheels, ainda com um crescimento pequeno, mas bem relevante e informativo para futuros serviços e melhorias.
+            </div>
+            <div class="descricao_especial">
+                Quer nos ajudar a almentar a popularidade do nosso site? compartilhe esse link: <u style="color: blue;">localhost:3000</u> com seus amigos e comecem a colecionar juntos!
+            </div>
         </div>
     </div>
 </body>
@@ -97,7 +106,7 @@
 const data = {
   labels: labels,
   datasets: [{
-    label: 'Quantidade de acessos',
+    label: 'Quantidade de acessos simultâneos - 2020',
     backgroundColor: 'rgb(0, 255, 255)',
     borderColor: 'rgb(0, 4, 255)',
     color: 'rgb(0, 0, 0)',
@@ -117,40 +126,23 @@ var myChart = new Chart(
   );
 
 
-  const labels = [
-  'Janeiro',
-  'Fevereiro',
-  'Março',
-  'Abril',
-  'Maio',
-  'Junho',
-  'Julho',
-  'Agosto',
-  'Setembro',
-  'Outubro',
-  'Novembro',
-  'Dezembro',
-];
-const data = {
-  labels: labels,
-  datasets: [{
-    label: 'Quantidade de acessos',
-    backgroundColor: 'rgb(0, 255, 255)',
-    borderColor: 'rgb(0, 4, 255)',
-    color: 'rgb(0, 0, 0)',
-    data: [12, 10, 20, 18, 39, 50, 34, 40, 55, 79, 23, 100],
-  }]
-};
+  const labelsBar = ['Marcelo Garcez', 'Márcio Tavares', 'Sônia Abreu', 'Paulo Jorge','Cristian Martins','Penélope Castro','Pietro Marino','Lúcia Barros','Fernando Cristino','Juan Carlos'];
+  const dataBar = {
+    labels: labelsBar,
+    datasets: [{
+      label: "Ranking de vendas - 2020",
+      backgroundColor: ["#0b006d", "#0d0086", "#1200b3", "#1800ec","#442fff","#6b5aff","#988cff","#bbb4ff","#cfcaff","#a6a1cc"],
+      borderColor: 'black',
+      data: [32, 28, 27, 19, 18, 16, 15, 13, 12, 9], // dados, dados, dados, dados
+    }]
+  };
 
-const config = {
-  type: 'line',
-  data,
-  options: {}
-};
+  const configBar = {
+    type: 'bar',
+    data: dataBar,
+    options: { maintainAspectRatio: false, }
+  };
 
-var myChart = new Chart(
-    document.getElementById('grafico2'),
-    config
-  );
+  var myChartBar = new Chart(document.getElementById('grafico2'), configBar);
 
 </script>

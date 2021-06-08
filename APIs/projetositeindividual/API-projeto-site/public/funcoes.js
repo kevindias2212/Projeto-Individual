@@ -12,10 +12,16 @@ function verificar_autenticacao() {
     if (login_usuario == undefined)  {
         redirecionar_login();
     } else {
-        b_usuario.innerHTML = nome_usuario;
+        nome_Usuario.innerHTML = nome_usuario;
         validar_sessao();
     }
     
+}
+
+function exibir_nome_perfil(){
+    nome_usuario = sessionStorage.nome_usuario_meuapp;
+    nome_perfil.innerHTML = nome_usuario;
+
 }
 
 function logoff() {
