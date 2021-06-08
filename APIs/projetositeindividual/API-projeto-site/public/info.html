@@ -6,8 +6,9 @@
     <title>Mundo das Miniaturas - Informações Gerais</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/central.css">
-    <link rel="stylesheet" href="css/anuncio.css">
+    <link rel="stylesheet" href="css/info.css">
     <script src="https://kit.fontawesome.com/c2cb9d7809.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
     
 <body>
@@ -46,6 +47,16 @@
             </div>
         </div>
     </div>
+    <div class="box_tras">
+        <div class="box_centro">
+            <div class="grafico">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="grafico">
+                <canvas id="grafico2"></canvas>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 <script>
@@ -61,11 +72,85 @@
         window.location.href = 'colecao.html';
     }
 
-function redirecionar_perfil(){
-    window.location.href = 'perfil.html';
-    }  
+    function redirecionar_perfil(){
+        window.location.href = 'perfil.html';
+    }
 
-function redirecionar_info(){
-    window.location.href = 'info.html';
-    }   
-</script>    
+    function redirecionar_info(){
+        window.location.href = 'info.html';
+    }
+
+    const labels = [
+  'Janeiro',
+  'Fevereiro',
+  'Março',
+  'Abril',
+  'Maio',
+  'Junho',
+  'Julho',
+  'Agosto',
+  'Setembro',
+  'Outubro',
+  'Novembro',
+  'Dezembro',
+];
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'Quantidade de acessos',
+    backgroundColor: 'rgb(0, 255, 255)',
+    borderColor: 'rgb(0, 4, 255)',
+    color: 'rgb(0, 0, 0)',
+    data: [12, 10, 20, 18, 39, 50, 34, 40, 55, 79, 23, 100],
+  }]
+};
+
+const config = {
+  type: 'line',
+  data,
+  options: {}
+};
+
+var myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+
+
+  const labels = [
+  'Janeiro',
+  'Fevereiro',
+  'Março',
+  'Abril',
+  'Maio',
+  'Junho',
+  'Julho',
+  'Agosto',
+  'Setembro',
+  'Outubro',
+  'Novembro',
+  'Dezembro',
+];
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'Quantidade de acessos',
+    backgroundColor: 'rgb(0, 255, 255)',
+    borderColor: 'rgb(0, 4, 255)',
+    color: 'rgb(0, 0, 0)',
+    data: [12, 10, 20, 18, 39, 50, 34, 40, 55, 79, 23, 100],
+  }]
+};
+
+const config = {
+  type: 'line',
+  data,
+  options: {}
+};
+
+var myChart = new Chart(
+    document.getElementById('grafico2'),
+    config
+  );
+
+</script>

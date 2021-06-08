@@ -3,26 +3,63 @@
 }
 
 .wall{
+    background-color: rgb(0, 81, 255);
     background-image: url(logoparteazul.png);
-    background-color: blue;
-    background-size: cover;
+    background-size: 40%;
     height: 800px;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
 }
 
 .box-esquerda{
-    background-color: rgba(0, 0, 0, 0.611);
-    height: 784px;
-    width: 23%;
+    background-color: rgba(255, 255, 255, 0.85);
+    height: 770px;
+    width: 19%;
     float: left;
-    margin-top: 16px;
+    margin-top: 25px;
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.filtros{
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    height: 95%;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: rgb(0, 0, 0) solid 1px;
 }
 
 .box-meio{
     background-color: rgba(255, 255, 255, 0.85);
-    height: 784px;
+    height: 770px;
     width: 75%;
-    margin-left: 16px;
-    margin-top: 16px;
+    margin-left: 40px;
+    margin-top: 25px;
+    margin-bottom: 16px;
+    overflow-y: scroll;
+}
+
+.anuncio{
+    height: 300px;
+    width: 300px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.678);
+    float: left;
+    text-align: center;
+}
+
+.rodape{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
 }

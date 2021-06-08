@@ -1,0 +1,31 @@
+.logo{
+    width: 180px;
+}
+
+.box_tras{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.box_centro{
+    margin: auto;
+    width: 85%;
+    height: 655px;
+    background-color: black;
+}
+
+.grafico{
+    width: 40%;
+    height: 40%;
+    margin-left: 75px;
+    margin-top: 46px;
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+
+.teste{
+    color: rgb(0, 4, 255);
+}
