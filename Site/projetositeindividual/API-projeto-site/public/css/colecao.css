@@ -100,7 +100,7 @@
 }
 
 .item{
-    background-color: rgb(20, 169, 255);
+    background-color: rgba(0, 0, 0, 0.644);
     color: white;
     font-size: 20px;
     margin-top: 10px;

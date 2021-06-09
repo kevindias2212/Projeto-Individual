@@ -1,12 +1,17 @@
 create database Mdm;
 use Mdm;
 
-create table  cadastroUsuario (id int primary key auto_increment, nome varchar(45), login varchar(45), email varchar(45), dataNasc date, telefone char(11), senha varchar(45)); 
-desc cadastroUsuario;
-truncate table cadastroUsuario;
-select * from cadastroUsuario;
+create table  cadastroUsuario (
+	id int primary key auto_increment, 
+    nome varchar(45), 
+    login varchar(45), 
+    email varchar(45), 
+    dataNasc date, 
+    telefone char(11), 
+    senha varchar(45)
+); 
 
-drop table cadastroUsuario;
+
 
 create table colecionador (
 	idItem int primary key auto_increment, 
@@ -17,16 +22,26 @@ create table colecionador (
     colecao varchar(45), 
     valor decimal(6,2)
 );
-
-truncate table colecionador;    
+ 
+create table anuncio(
+	idAnuncio int primary key,
+    descricao varchar(45),
+    localidade varchar(45)
+);
+    
+create table cadastroUsuario_anuncio(
+	fkUsuario int,
+    fkAnuncio int,
+    foreign key (fkUsuario) references cadastroUsuario(id),
+    foreign key (fkAnuncio) references anuncio(idAnuncio),
+    preco decimal(6,2),
+    dataPost date,
+    validade date
+);
     
 insert into colecionador values (null, 1, 'bugatti chiron', '2020-06-02', 'Exotics', 16.99),
 								(null, 1, 'McLaren Speedtail', '2021-03-02', 'Exotics', 16.99),
 								(null, 1, 'Camaro Copo', '2020-06-02', 'Exotics', 16.99),
-                                (null, 2, 'Boom Car', '2021-03-02', 'Exotics', 16.99),
-                                (null, 2, 'Lamborghini Centenario', '2021-03-02', 'Exotics', 16.99),
-                                (null, 2, 'Pexel Shaker', '2021-03-02', 'Exotics', 16.99);
-                                
-
-
-select * from colecionador where fkUsuario = 1;
+                                (null, 1, 'Boom Car', '2021-03-02', 'Exotics', 16.99),
+                                (null, 1, 'Lamborghini Centenario', '2021-03-02', 'Exotics', 16.99),
+                                (null, 1, 'Pixel Shaker', '2021-03-02', 'Exotics', 16.99);
