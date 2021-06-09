@@ -1,4 +1,4 @@
-	'use strict';
+'use strict';
 
 /* 
 lista e explicação dos Datatypes:
@@ -6,52 +6,49 @@ https://codewithhugo.com/sequelize-data-types-a-practical-guide/
 */
 
 module.exports = (sequelize, DataTypes) => {
-    let Usuario = sequelize.define('Usuario',{
-		id: {
-			field: 'id',
+    let Colecao = sequelize.define('Colecao',{
+		idItem: {
+			field: 'idItem',
 			type: DataTypes.INTEGER,
-			primaryKey: true,
-			autoIncrement: true
+            primaryKey: true,
+			autoIncrement: true,
+            allowNull: false
 		},		
-		nome: {
-			field: 'nome',
-			type: DataTypes.STRING,
+		user: {
+			field: 'fkUsuario',
+			type: DataTypes.INTEGER,
+            foreignKey: true,
 			allowNull: false
 		},
-		login: {
-			field: 'login',
-			type: DataTypes.STRING,
-			allowNull: false
-		},
-		email: {
-			field: 'email',
+		nomeMiniatura: {
+			field: 'nomeItem',
 			type: DataTypes.STRING,
 			allowNull: false
 		},
 		data: {
-			field: 'dataNasc',
+			field: 'dataLanc',
 			type: DataTypes.DATE,
 			allowNull: false
 		},
-		telefone: {
-			field: 'telefone',
+		colec: {
+			field: 'colecao',
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		senha: {
-			field: 'senha',
+		valor: {
+			field: 'valor',
 			type: DataTypes.STRING,
 			allowNull: false
-		}
+		},
 	}, 
 	{
-		tableName: 'CadastroUsuario', 
+		tableName: 'colecionador', 
 		freezeTableName: true, 
 		underscored: true,
 		timestamps: false,
 	});
 
-    return Usuario;
+    return Colecao;
 };
 
 

@@ -1,18 +1,32 @@
-create database teste;
+create database Mdm;
+use Mdm;
+
+create table  cadastroUsuario (id int primary key auto_increment, nome varchar(45), login varchar(45), email varchar(45), dataNasc date, telefone char(11), senha varchar(45)); 
+desc cadastroUsuario;
+truncate table cadastroUsuario;
+select * from cadastroUsuario;
+
+drop table cadastroUsuario;
+
+create table colecionador (
+	idItem int primary key auto_increment, 
+    fkUsuario int, 
+    foreign key (fkUsuario) references cadastroUsuario(id), 
+    nomeItem varchar(45), 
+    dataLanc date, 
+    colecao varchar(45), 
+    valor decimal(6,2)
+);
+
+truncate table colecionador;    
+    
+insert into colecionador values (null, 1, 'bugatti chiron', '2020-06-02', 'Exotics', 16.99),
+								(null, 1, 'McLaren Speedtail', '2021-03-02', 'Exotics', 16.99),
+								(null, 1, 'Camaro Copo', '2020-06-02', 'Exotics', 16.99),
+                                (null, 2, 'Boom Car', '2021-03-02', 'Exotics', 16.99),
+                                (null, 2, 'Lamborghini Centenario', '2021-03-02', 'Exotics', 16.99),
+                                (null, 2, 'Pexel Shaker', '2021-03-02', 'Exotics', 16.99);
+                                
 
 
-use teste;
-
-
-create table teste1 (id int primary key auto_increment,
-		     nome varchar(45), 
-		     login varchar(45), 
-		     email varchar(45), 
-		     dataNasc date, 
-		     telefone char(11), 
-		     senha varchar(45));
-
-
-select * from teste1;
-
-drop table teste1;
+select * from colecionador where fkUsuario = 1;

@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundo das Miniaturas - Coleção</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/central.css">
-    <link rel="stylesheet" href="css/anuncio.css">
+    <link rel="stylesheet" href="css/colecao.css">
     <script src="https://kit.fontawesome.com/c2cb9d7809.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
 </head>
-    
+
 <body>
     <!--header inicio-->
     <div class="header" style="position:static;">
         <div class="container">
-            <h1 class="titulo"><img class="logo" src="logonova.png";></h1>
+            <h1 class="titulo"><img class="logo" src="logonova.png" ;></h1>
             <div class="exit">
-                <ul onclick="sair()">
+                <ul onclick="logoff()">
                     Sair <i class="fas fa-sign-out-alt" style="font-size: 25px;color: white;"></i>
                 </ul>
             </div>
@@ -32,7 +34,7 @@
             <div class="icon" onclick="redirecionar_colecao()">
                 <i class="fas fa-car"></i>
                 <br>
-                <span style="font-size: 15px;"></span>Coleção</span>
+                <span style="font-size: 15px;color: white;"></span>Coleção</span>
             </div>
             <div class="icon" onclick="redirecionar_perfil()">
                 <i class="fas fa-id-card"></i>
@@ -46,26 +48,88 @@
             </div>
         </div>
     </div>
+    <div class="bloco_tras">
+        <div class="bloco_meio">
+            <div class="box_inputs">
+                <p></p>
+                <span class="titulo_colecao">Adicione os seus itens à coleção!!</span>
+                <p></p>
+                <div class="div_formulario">
+                    <form id="form_armazenar" method="post" onsubmit="return registrar()" action="javascript:void(0)">
+                        Nome da miniatura: <br>
+                        <input id="input_nome" name="nomeMiniatura" type="text" class="input-padrao"
+                            placeholder="Nome do carrinho" required minlength="1">
+                        <p></p>
+                        Data de lançamento: <br>
+                        <input id="input_data" name="data" type="date" class="input-padrao"
+                            placeholder="Ano em que foi lançado">
+                        <p></p>
+                        Coleção pertencente: <br>
+                        <input id="input_colec" name="colec" type="text" class="input-padrao" placeholder="Nome da coleção"
+                            required minlength="4">
+                        <p></p>
+                        Valor: <br>
+                        <input id="input_valor" name="valor" type="text" class="input-padrao" placeholder="R$" required
+                            minlength="4">
+                        <p></p>
+                        <button id="btn_armazenar" class="botao-armazenar" type="submit">Armazenar item</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bloco_meio">
+            <div class="box_itens">
+                <div class="itens">
+                    <span style="border-bottom: black solid 2px;font-size: 30px;">Vizualização de itens da sua
+                        coleção</span>
+                    <br>
+                    <div id="lista" class="lista">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
 <script>
-    function sair(){
-        window.location.href = 'index.html';
+    
+
+    function teste() {
+        lista.innerHTML += `<div id="item" class="item"></div>`
     }
 
-    function redirecionar_anuncio(){
-        window.location.href = 'anuncio.html';
+    
+    var idUsuario = sessionStorage.getItem('idUsuario')
+
+    function atualizar(){
+        lista.innerHTML = ""
+        fetch(`/colecoes/getCollections/${idUsuario}`).then(resposta => {
+            resposta.json().then(data => {
+                console.log(data)
+                data.forEach(element => {
+                    lista.innerHTML += `<div id="item" class="item">${element.nomeMiniatura}, ${element.data}, ${element.colec}, ${element.valor}</div>`
+                });
+            });
+        })
     }
 
-    function redirecionar_colecao(){
-        window.location.href = 'colecao.html';
+    atualizar()
+
+    function registrar() {
+        var form = new URLSearchParams(new FormData(form_armazenar)); 
+        fetch(`/colecoes/registrar/${idUsuario}`,{
+            body: form, 
+            method: 'POST'
+        }).then(resposta => {
+            if(resposta.ok){
+                atualizar()
+            }
+        })
+        input_nome.value = ""
+        input_data.value = ""
+        input_colec.value = ""
+        input_valor.value = ""
     }
 
-function redirecionar_perfil(){
-    window.location.href = 'perfil.html';
-    }  
+</script>
 
-function redirecionar_info(){
-    window.location.href = 'info.html';
-    }   
-</script>    
+</html>

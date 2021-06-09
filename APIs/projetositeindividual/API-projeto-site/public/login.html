@@ -67,12 +67,14 @@
                 if (in_usuario.value == 'kkggdd' && in_senha.value == 'kkggdd2212') {
 
                     resposta.json().then(json => {
+                        sessionStorage.setItem('idUsuario', json.id);
                         sessionStorage.login_usuario_meuapp = json.login;
                         window.location.href = 'info.html';
                     });
 
                 }else{
                     resposta.json().then(json => {
+                        sessionStorage.setItem('idUsuario', json.id);
                         sessionStorage.login_usuario_meuapp = json.login;
                         sessionStorage.nome_usuario_meuapp = json.nome;
     

@@ -18,7 +18,7 @@ function verificar_autenticacao() {
     
 }
 
-function exibir_nome_perfil(){
+function exibir_dados(){
     nome_usuario = sessionStorage.nome_usuario_meuapp;
     nome_perfil.innerHTML = nome_usuario;
 
@@ -42,6 +42,22 @@ function validar_sessao() {
             logoff();
         } 
     });    
+}
+
+function redirecionar_anuncio(){
+    window.location.href = 'anuncio.html';
+}
+
+function redirecionar_colecao(){
+    window.location.href = 'colecao.html';
+}
+
+function redirecionar_perfil(){
+window.location.href = 'perfil.html';
+}
+
+function redirecionar_info(){
+window.location.href = 'info.html';
 }
 
 function finalizar_sessao() {
